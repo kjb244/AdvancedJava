@@ -10,6 +10,7 @@ public class Olive {
 	
 	public Olive(OliveName oliveName, OliveColor color) {
 		this.oliveName = oliveName;
+
 		this.color = color;
 	}
 	
