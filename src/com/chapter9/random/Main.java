@@ -3,8 +3,8 @@ package com.chapter9.random;
 public class Main {
 
     public static void main(String[] args){
-        MyThreads t1 = new MyThreads();
-        MyThreads t2 = new MyThreads();
+        MyThreads t1 = new MyThreads(1);
+        MyThreads t2 = new MyThreads(0);
         System.out.println("threads starting");
         t1.start();
         t2.start();

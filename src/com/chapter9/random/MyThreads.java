@@ -11,11 +11,25 @@ import java.util.stream.Collectors;
 public class MyThreads extends Thread {
 
     private String value;
+    private int initParm;
+
+    public MyThreads(){
+
+    }
+
+    public  MyThreads(int initParm){
+        this.initParm = initParm;
+    }
 
     @Override
     public void run(){
+        if(initParm ==1){
+            makeHttpGet("https://api.github.com/users/kjb244");
+        }
+        else{
+            makeHttpGet("https://api.github.com/users/kjb");
 
-        makeHttpGet("https://api.github.com/users/kjb244");
+        }
     }
 
     public String getValue(){
